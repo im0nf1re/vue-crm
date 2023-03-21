@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 Vue.use(VueRouter);
 
@@ -11,7 +10,7 @@ const routes = [
     meta: {
       layout: "main",
     },
-    component: HomeView,
+    component: () => import("../views/HomeView.vue"),
   },
   {
     path: "/login",
